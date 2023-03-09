@@ -62,7 +62,7 @@ int divide(int dividend, int divisor) {
         dvd *= -1;
     if(dvs < 0)
         dvs *= -1;
-    int res = 0;
+    long res = 0;
 
     while (dvd >= dvs) {
         long long temp = dvs, multiple = 1;
