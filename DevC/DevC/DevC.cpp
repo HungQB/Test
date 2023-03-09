@@ -73,14 +73,21 @@ int divide(int dividend, int divisor) {
         dvd -= temp;
         res += multiple;
     }
+    res *= sign;
 
-    return sign * res;
+    if (res > INT_MAX) {
+        return INT_MAX;
+    }
+    if (res < INT_MIN) {
+        return INT_MIN;
+    }
+    return res;
 }
 
 int main()
 {
     vector<int> my_vector = { 1,1,2,2,3,4,4,5,5 };
-    cout << reverse(748566984)<<endl;
+    cout << reverse(INT_MAX)<<endl;
     cout << singleNonDuplicate(my_vector)<<endl;
     cout << divide(INT_MIN, INT_MIN);
     return 0;
